@@ -1,0 +1,50 @@
+.upload-wrap {
+    label {
+        position: relative;
+        display: inline-block;
+        min-width: 200px;
+        font-size: 1.25rem;
+        font-weight: 700;
+        text-align: center;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+        padding: 0.625rem 0.75rem;
+        color: #f1e5e6;
+        background-color: #2196f3;
+        cursor: pointer;
+        &:hover {
+            background-color: #0c7cd5;
+        }
+        .progress {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 4px;
+            background: linear-gradient(-45deg,
+                          #fff 25%, #58a 0, #58a 50%,
+                          #fff 0, #fff 75%, #58a 0);
+            background-size: 16px 16px;
+        }
+    }
+    input {
+        position: absolute;
+        width: 0;
+        height: 0;
+        opacity: 0;
+        z-index: -1;
+    }
+    em{
+        line-height: 4em;
+        vertical-align: top;
+        display: inline-block;
+        font-style: normal;
+        font-size: 1.2em;
+        &.error {
+            color: #ef9b6d;
+        }
+        &.success {
+            color: #65c178;
+        }
+    }
+}
